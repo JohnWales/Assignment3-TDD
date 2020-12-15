@@ -30,8 +30,7 @@ class ColourTest {
 
 
     /**
-     * Testing all possible invalid RGB values
-     * Invalid values are when it exceeds 255 or is < 0
+     * Testing to ensure an invalid r value greater than 255 fails to create an object
      */
     @Test
     public void testColourRGB256Null() {
@@ -44,6 +43,9 @@ class ColourTest {
         assertNull(this.colourInvalidRed256);
     }
 
+    /**
+     * Testing to ensure an invalid r value less than 0 fails to create an object
+     */
     @Test
     public void testColourRGBMinus1Null() {
         try {
