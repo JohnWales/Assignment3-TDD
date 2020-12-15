@@ -81,6 +81,11 @@ public class Colour {
      * @return true or false depending on values of colours
      */
     public boolean compare(Colour colourComparison) {
-        return false;
+        if ( this.red == colourComparison.getRed() &&
+                this.green == colourComparison.getGreen() &&
+                this.blue == colourComparison.getBlue() )
+            return true;
+        else return false;
+
     }
 }
