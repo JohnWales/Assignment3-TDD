@@ -11,6 +11,7 @@ class ColourTest {
      */
     Colour colourValid1;
     Colour colourInvalidRed256;
+    Colour colourInvalidRedMinus1;
 
 
     /**
@@ -35,11 +36,22 @@ class ColourTest {
     @Test
     public void testColourRGB256Null() {
         try {
-            colourInvalidRed256 = new Colour(256, 0, 0);
+            this.colourInvalidRed256 = new Colour(256, 0, 0);
         }
         catch(Exception e) {
 
         }
         assertNull(this.colourInvalidRed256);
+    }
+
+    @Test
+    public void testColourRGBMinus1Null() {
+        try {
+            this.colourInvalidRedMinus1 = new Colour(-1, 0, 0);
+        }
+        catch(Exception e) {
+
+        }
+        assertNull(this.colourInvalidRedMinus1);
     }
 }
