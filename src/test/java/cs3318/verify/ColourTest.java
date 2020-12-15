@@ -201,4 +201,15 @@ class ColourTest {
         Colour greenRGB = new Colour(0, 255, 0);
         assertFalse(greenColour.compare(greenRGB));
     }
+
+    /**
+     * Testing is 2 colours of the String model are equal
+     * @throws Exception
+     */
+    @Test
+    public void testColoursEqualString () throws Exception {
+        Colour randomColour1 = new Colour("Red");
+        Colour randomColour2 = new Colour("Red");
+        assertTrue(randomColour1.compare(randomColour2));
+    }
 }
