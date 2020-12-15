@@ -74,4 +74,13 @@ public class Colour {
         return this.blue;
     }
 
+
+    /**
+     * Compares colours
+     * @param colourComparison variable used to compare colours with one another
+     * @return true or false depending on values of colours
+     */
+    public boolean compare(Colour colourComparison) {
+        return false;
+    }
 }
