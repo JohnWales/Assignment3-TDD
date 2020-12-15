@@ -10,6 +10,7 @@ class ColourTest {
      * This is where colour objects are created
      */
     Colour colourValid1;
+    Colour colourInvalidRed256;
 
 
     /**
@@ -24,5 +25,21 @@ class ColourTest {
 
         }
         assertNotNull(this.colourValid1);
+    }
+
+
+    /**
+     * Testing all possible invalid RGB values
+     * Invalid values are when it exceeds 255 or is < 0
+     */
+    @Test
+    public void testColourRGB256Null() {
+        try {
+            colourInvalidRed256 = new Colour(256, 0, 0);
+        }
+        catch(Exception e) {
+
+        }
+        assertNull(this.colourInvalidRed256);
     }
 }
