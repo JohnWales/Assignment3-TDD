@@ -27,7 +27,7 @@ public class Colour {
         green = g;
         blue = b;
 
-        if ( red > MAX_VALUE) {
+        if ( red > MAX_VALUE || red < MIN_VALUE ) {
             throw new Exception("Invalid Red Colour");
         }
     }
