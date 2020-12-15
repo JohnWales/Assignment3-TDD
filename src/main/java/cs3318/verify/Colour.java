@@ -101,6 +101,18 @@ public class Colour {
      * @return current object
      */
     public Colour add(Colour addColour) {
+        this.red = this.red + addColour.getRed();
+        this.green = this.green + addColour.getGreen();
+        this.blue = this.blue + addColour.getBlue();
+        if ( this.red > MAX_VALUE ) {
+            this.red = MAX_VALUE;
+        }
+        if ( this.green > MAX_VALUE ) {
+            this.green = MAX_VALUE;
+        }
+        if ( this.blue > MAX_VALUE ) {
+            this.blue = MAX_VALUE;
+        }
         return this;
     }
 }
