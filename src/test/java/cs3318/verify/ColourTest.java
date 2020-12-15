@@ -12,6 +12,7 @@ class ColourTest {
     Colour colourValid1;
     Colour colourInvalidRed256;
     Colour colourInvalidRedMinus1;
+    Colour colourInvalidGreen256;
 
 
     /**
@@ -55,5 +56,19 @@ class ColourTest {
 
         }
         assertNull(this.colourInvalidRedMinus1);
+    }
+
+    /**
+     * Testing to ensure an invalid r value greater than 255 fails to create an object
+     */
+    @Test
+    public void testColourGreen256Null() {
+        try {
+            this.colourInvalidGreen256 = new Colour(0, 256, 0);
+        }
+        catch(Exception e) {
+
+        }
+        assertNull(this.colourInvalidGreen256);
     }
 }
