@@ -50,6 +50,11 @@ public class Colour {
             green = MAX_VALUE;
             blue = MIN_VALUE;
         }
+        else if ( colourName == "Blue" ) {
+            red = MIN_VALUE;
+            green = MIN_VALUE;
+            blue = MAX_VALUE;
+        }
         else{
             throw new Exception("Invalid Colour");
         }
