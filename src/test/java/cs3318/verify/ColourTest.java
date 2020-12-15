@@ -227,4 +227,17 @@ class ColourTest {
         assertEquals(addColour.getGreen(), 150);
         assertEquals(addColour.getBlue(), 150);
     }
+
+    /**
+     * If exceeds 255, it is set to 255
+     * @throws Exception
+     */
+    @Test
+    public void addTotalExceeds255() throws Exception {
+        Colour randomColour1 = new Colour(56, 56, 56);
+        Colour randomColour2 = new Colour(200, 200, 200);
+        Colour addColour = new Colour(randomColour1.getRed(), randomColour1.getGreen(), randomColour1.getBlue());
+        addColour.add(randomColour2);
+        assertTrue(addColour.getRed() <= 255);
+    }
 }
