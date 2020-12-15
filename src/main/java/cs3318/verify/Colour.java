@@ -33,5 +33,8 @@ public class Colour {
         if ( green > MAX_VALUE || green < MIN_VALUE ) {
             throw new Exception("Invalid Green Colour");
         }
+        if ( blue > MAX_VALUE ) {
+            throw new Exception("Invalid Blue Colour");
+        }
     }
 }
