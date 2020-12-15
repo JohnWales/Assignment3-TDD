@@ -22,9 +22,13 @@ public class Colour {
      * @param g represents Green in the RGB value
      * @param b represents Blue in the RGB value
      */
-    public Colour(int r, int g, int b) {
+    public Colour(int r, int g, int b) throws Exception {
         red = r;
         green = g;
         blue = b;
+
+        if ( red > MAX_VALUE) {
+            throw new Exception("Invalid Red Colour");
+        }
     }
 }
