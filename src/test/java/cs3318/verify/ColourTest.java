@@ -179,4 +179,14 @@ class ColourTest {
     }
 
 
+    /**
+     * Should be equal as they have the same colour models and component values
+     * @throws Exception
+     */
+    @Test
+    public void testColoursEqualRGB () throws Exception {
+        Colour randomColour1 = new Colour(0, 10, 20);
+        Colour randomColour2 = new Colour(0, 10, 20);
+        assertTrue(randomColour1.compare(randomColour2));
+    }
 }
