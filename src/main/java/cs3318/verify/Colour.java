@@ -59,4 +59,19 @@ public class Colour {
             throw new Exception("Invalid Colour");
         }
     }
+
+    /**
+     * Getters which returns Colour value
+     * @return colour
+     */
+    public int getRed() {
+        return this.red;
+    }
+    public int getGreen() {
+        return this.green;
+    }
+    public int getBlue() {
+        return this.blue;
+    }
+
 }
