@@ -8,6 +8,7 @@ public class Colour {
     int red;
     int green;
     int blue;
+    String model;
 
     /**
      * Creating a max and min value for the RGB model
@@ -24,6 +25,7 @@ public class Colour {
      * @param b represents Blue in the RGB value
      */
     public Colour(int r, int g, int b) throws Exception {
+        model = "RGB";
         red = r;
         green = g;
         blue = b;
@@ -40,6 +42,7 @@ public class Colour {
     }
 
     public Colour(String colourName) throws Exception {
+        model = "String";
         if ( colourName == "Red" ) {
             red = MAX_VALUE;
             green = MIN_VALUE;
@@ -73,6 +76,9 @@ public class Colour {
     public int getBlue() {
         return this.blue;
     }
+    public String getModel() {
+        return this.model;
+    }
 
 
     /**
@@ -83,9 +89,9 @@ public class Colour {
     public boolean compare(Colour colourComparison) {
         if ( this.red == colourComparison.getRed() &&
                 this.green == colourComparison.getGreen() &&
-                this.blue == colourComparison.getBlue() )
+                this.blue == colourComparison.getBlue() &&
+                this.model == colourComparison.getModel() )
             return true;
         else return false;
-
     }
 }
