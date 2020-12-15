@@ -19,6 +19,7 @@ class ColourTest {
     Colour redColour;
     Colour greenColour;
     Colour blueColour;
+    Colour yellowColour;
 
 
     /**
@@ -160,5 +161,20 @@ class ColourTest {
 
         }
         assertNotNull(this.blueColour);
+    }
+
+    /**
+     * Expecting this method to fail as yellow is not a valid colour
+     * in this model
+     */
+    @Test
+    public void testColourYellow() {
+        try {
+            this.yellowColour = new Colour("Yellow");
+        }
+        catch(Exception e) {
+
+        }
+        assertNull(this.yellowColour);
     }
 }
