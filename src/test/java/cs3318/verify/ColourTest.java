@@ -33,7 +33,7 @@ class ColourTest {
      * Testing to ensure an invalid r value greater than 255 fails to create an object
      */
     @Test
-    public void testColourRGB256Null() {
+    public void testColourRed256Null() {
         try {
             this.colourInvalidRed256 = new Colour(256, 0, 0);
         }
@@ -47,7 +47,7 @@ class ColourTest {
      * Testing to ensure an invalid r value less than 0 fails to create an object
      */
     @Test
-    public void testColourRGBMinus1Null() {
+    public void testColourRedMinus1Null() {
         try {
             this.colourInvalidRedMinus1 = new Colour(-1, 0, 0);
         }
