@@ -28,7 +28,6 @@ public class Colour {
         green = g;
         blue = b;
 
-        if ( red > MAX_VALUE || red < MIN_VALUE ) {
         if (red > MAX_VALUE || red < MIN_VALUE) {
             throw new Exception("Invalid Red Colour");
         }
@@ -41,6 +40,13 @@ public class Colour {
     }
 
     public Colour(String colourName) throws Exception {
-        throw new Exception("Invalid Colour");
+        if ( colourName == "Red" ) {
+            red = MAX_VALUE;
+            green = MIN_VALUE;
+            blue = MIN_VALUE;
+        }
+        else{
+            throw new Exception("Invalid Colour");
+        }
     }
 }
