@@ -94,4 +94,13 @@ public class Colour {
             return true;
         else return false;
     }
+
+    /**
+     * Colours can be added but cannot exceed 255, if so they are set to 255
+     * @param addColour
+     * @return current object
+     */
+    public Colour add(Colour addColour) {
+        return this;
+    }
 }

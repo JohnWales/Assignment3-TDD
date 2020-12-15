@@ -212,4 +212,19 @@ class ColourTest {
         Colour randomColour2 = new Colour("Red");
         assertTrue(randomColour1.compare(randomColour2));
     }
+
+    /**
+     * Adding 2 colours together
+     * @throws Exception
+     */
+    @Test
+    public void testColourAdding() throws Exception {
+        Colour colourRGB100 = new Colour(100, 100, 100);
+        Colour colourRGB50 = new Colour(50, 50, 50);
+        Colour addColour = new Colour(colourRGB100.getRed(), colourRGB100.getGreen(), colourRGB100.getBlue());
+        addColour.add(colourRGB50);
+        assertEquals(addColour.getRed(), 150);
+        assertEquals(addColour.getGreen(), 150);
+        assertEquals(addColour.getBlue(), 150);
+    }
 }
