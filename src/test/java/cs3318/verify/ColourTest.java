@@ -17,6 +17,7 @@ class ColourTest {
     Colour colourInvalidBlue256;
     Colour colourInvalidBlueMinus1;
     Colour redColour;
+    Colour greenColour;
 
 
     /**
@@ -130,5 +131,19 @@ class ColourTest {
 
         }
         assertNotNull(this.redColour);
+    }
+
+    /**
+     * Testing green colour as a String model
+     */
+    @Test
+    public void testColourGreen() {
+        try {
+            this.greenColour = new Colour("Green");
+        }
+        catch(Exception e) {
+
+        }
+        assertNotNull(this.greenColour);
     }
 }
